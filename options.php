@@ -5,12 +5,12 @@
   <div id="poststuff">
     <div id="post-body" class="metabox-holder columns-2">
       <div id="post-body-content">
-  <form action="options.php" method="post" id="<?php echo $addfmobdtctID; ?>_options_form" name="<?php echo $addfmobdtctID; ?>_options_form">
-<?php settings_fields($addfmobdtctID.'_options'); ?>
-        <label for="addfmobdtct_redirect" ><strong>Mobile Redirect<span class="hideswitch"> Active</span>:</strong></label>
+  <form action="options.php" method="post" id="<?php echo $aFmobdtctID; ?>_options_form" name="<?php echo $aFmobdtctID; ?>_options_form">
+<?php settings_fields($aFmobdtctID.'_options'); ?>
+        <label for="aFmobdtct_redirect" ><strong>Mobile Redirect<span class="hideswitch"> Active</span>:</strong></label>
         <div style="display: inline;" class="offonswitch">
-          <input type="checkbox" name="addfmobdtct_redirect" class="offonswitch-checkbox" id="addfmobdtct_redirect" value="1" <?php checked( '1', get_option('addfmobdtct_redirect') ); ?> />
-          <label class="offonswitch-label" for="addfmobdtct_redirect">
+          <input type="checkbox" name="aFmobdtct_redirect" class="offonswitch-checkbox" id="aFmobdtct_redirect" value="1" <?php checked( '1', get_option('aFmobdtct_redirect') ); ?> />
+          <label class="offonswitch-label" for="aFmobdtct_redirect">
             <div class="offonswitch-inner"></div>
             <div class="offonswitch-switch"></div>
           </label>

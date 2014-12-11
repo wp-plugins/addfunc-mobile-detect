@@ -3,7 +3,7 @@
     Plugin Name: AddFunc Mobile Detect
     Plugin URI:
     Description: Redirects mobile traffic to your mobile website on a page-by-page basis (posts and custom post types included). This can be overridden on any page individually with a convenient meta box adjacent to the WYSIWYG. Sets a cookie to remember which version of your website (desktop or mobile, usually) your visitors opted for. Includes a widget for inserting a link back to your mobile site, which is only generated for mobile devices. Includes two shortcodes for generating links to your mobile site--one is generated only for mobile devices and the other is generated regardless. No CSS rules are used. CSS classes are provided, yielding coders full reign to style the generated links to fit the website theme. Adds a class to the body ("mobile-detected") to help coders write styles specifically for mobile devices. Leaves 404 errors untouched, allowing you to maintain 404 statuses. Basically, it gives you loads of control of your mobile redirects.
-    Version: 1.1
+    Version: 1.2
     Author: AddFunc
     Author URI: http://profiles.wordpress.org/addfunc
     License: Public Domain
@@ -113,18 +113,20 @@ function aFmobdtctRedirect() {
 */
 
 # Remove default value before saving to the database
-function xdefaultvalue($input)
-{
-  if(isset($input))
+if(!function_exists('aFxmobdefault')){
+  function aFxmobdefault($input)
   {
-    if ($input=='http://')
+    if(isset($input))
     {
-      $input = NULL;
-      return $input;
-    }
-    else
-    {
-      return $input;
+      if ($input=='http://')
+      {
+        $input = NULL;
+        return $input;
+      }
+      else
+      {
+        return $input;
+      }
     }
   }
 }
@@ -140,7 +142,7 @@ define('aFmobdtct_NICK', 'Mobile Detect');
     public static function register()
     {
       register_setting(aFmobdtct_ID.'_options', 'aFmobdtct_redirect');
-      register_setting(aFmobdtct_ID.'_options', 'the_mobile_site_uri','xdefaultvalue');
+      register_setting(aFmobdtct_ID.'_options', 'the_mobile_site_uri','aFxmobdefault');
       register_setting(aFmobdtct_ID.'_options', 'non_mobile_site_uri');
     }
     public static function menu()

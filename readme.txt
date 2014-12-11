@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: mobile, mobile detect, mobile detection, mobile redirect, page-by-page mobile redirect, page-by-page, individual page basis, per-page mobile redirect, per page mobile site redirect, mobile site redirect, mobile website redirect, mobile redirection, mobile site redirection, mobile website redirection, 301 redirect to mobile site, 301 redirect to mobile website, mobile device, mobile site, mobile website, mobile version, mobile site link, mobile website link, redirect mobile device, desktop site to mobile site redirect
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,17 +89,22 @@ When a coconut falls on the beach and no one is around to hear it, does it make 
 
 == Changelog ==
 
+= 1.2 =
+11-Dec-2014
+
+*   Fixes fatal bug, where settings page wouldn't save anything (caused when changing the namespaces to match the name AddFunc and mismatching some of them in options.php)
+
 = 1.1 =
 04-Dec-2014
 
-*   Fixed meta box nounce
+*   Fixes meta box nounce
 
 = 1.0 =
 16-Oct-2014
 
 *   Adds shortcode [mobilesite]. Produces the exact same results as [mobilesitebutton]
 *   Change CSS class of widget output to "mobile-site-opt" instead of "mobile-site-link" (to avoid confusion between the widget and the shortcode when styling)
-*   Prepared for release as AddFunc Mobile Detect 1.0
+*   Prepared for release as AddFunc Mobile Detect 1.1
 
 27-Aug-2014
 
