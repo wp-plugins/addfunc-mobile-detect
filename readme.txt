@@ -5,7 +5,7 @@ Contributors: AddFunc,average.technology,joerhoney
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7AF7P3TFKQ2C2
 Tags: mobile, mobile detect, mobile detection, mobile redirect, page-by-page mobile redirect, page-by-page, individual page basis, per-page mobile redirect, per page mobile site redirect, mobile site redirect, mobile website redirect, mobile redirection, mobile site redirection, mobile website redirection, 301 redirect to mobile site, 301 redirect to mobile website, mobile device, mobile site, mobile website, mobile version, mobile site link, mobile website link, redirect mobile device, desktop site to mobile site redirect
 Requires at least: 3.0.1
-Tested up to: 4.0
+Tested up to: 4.2
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
