@@ -3,14 +3,14 @@
 
 Contributors: AddFunc,average.technology,joerhoney
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7AF7P3TFKQ2C2
-Tags: mobile redirect, mobile detect, mobile redirection, mobile detection, mobile device, page-by-page mobile redirect, page-by-page, per page, individual page basis, per page mobile redirect, per page mobile device redirect, mobile device redirect, mobile website redirect, 301 redirect to mobile site, 301 redirect to mobile website, mobile site, mobile website, mobile version, mobile site link, mobile website link, redirect mobile device, desktop site to mobile site redirect
+Tags: mobile, mobile detect, mobile detection, mobile redirect, page-by-page mobile redirect, page-by-page, individual page basis, per-page mobile redirect, per page mobile site redirect, mobile site redirect, mobile website redirect, mobile redirection, mobile site redirection, mobile website redirection, 301 redirect to mobile site, 301 redirect to mobile website, mobile device, mobile site, mobile website, mobile version, mobile site link, mobile website link, redirect mobile device, desktop site to mobile site redirect
 Requires at least: 3.0.1
-Tested up to: 4.2
-Stable tag: 1.2
+Tested up to: 4.0
+Stable tag: 2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Redirects mobile traffic to mobile site, allows visitors to opt for desktop site, provides shortcodes and widget to generate links to mobile site
+Redirects mobile traffic, allows visitors to opt back, optionally prevent redirection of WordPress' parts (Post, Home, Tags, etc.)
 
 == Description ==
 
@@ -21,6 +21,8 @@ Uses [Mobile Detect](http://mobiledetect.net/) to redirect mobile traffic to you
 *   This can be overridden on any page individually with a convenient meta box adjacent to the WYSIWYG (usually underneath, by default).
 
 *   Sets a cookie to remember which version of your website (desktop or mobile, usually) your visitors opted for (so it's okay to set a link on your mobile site to view the desktop version).
+
+*   Provides options to NOT redirect basic parts of WordPress: the Front page (static), Pages, the "Home" page (blog posts page), Posts, Attachments, Authors, Categories, Dates, Tags and search results
 
 *   Includes a widget for inserting a link back to your mobile site, which is only generated for mobile devices.
 
@@ -81,7 +83,7 @@ When a coconut falls on the beach and no one is around to hear it, does it make 
 
 == Screenshots ==
 
-1. Set the URL to your mobile website and activate. The URI of your desktop website should be automatically populated, but if for whatever reason you need to change it just enter it into the appropriate field. This page also serves as a reference for the shortcodes included.
+1. Set the URL to your mobile website and activate. The URI of your desktop website should be automatically populated, but if for whatever reason you need to change it just enter it into the appropriate field. Yon may choose not to redirect mobile devices to any of the basic parts of WordPress — the Front page (static), Pages, the "Home" page (blog posts page), Posts, Attachments, Authors, Categories, Dates, Tags and search results. The options page also serves as a reference for the shortcodes that are automatically generated.
 
 2. An optional widget also generates a link to your mobile website. The link displays only on mobile devices.
 
@@ -89,22 +91,32 @@ When a coconut falls on the beach and no one is around to hear it, does it make 
 
 == Changelog ==
 
-= 1.2 =
-11-Dec-2014
+= 2 =
+29-Jun-2015
 
-*   Fixes fatal bug, where settings page wouldn't save anything (caused when changing the namespaces to match the name AddFunc and mismatching some of them in options.php)
+*   Provides the option to NOT redirect the Front page (static home page)
+*   Provides the option to NOT redirect any Pages (all or none — excludes the Front page)
+*   Provides the option to NOT redirect the Home page (blog posts page)
+*   Provides the option to NOT redirect any Posts (all or none)
+*   Provides the option to NOT redirect any Attachments (all or none)
+*   Provides the option to NOT redirect any Authors (all or none)
+*   Provides the option to NOT redirect any Categories (all or none)
+*   Provides the option to NOT redirect any Dates (all or none)
+*   Provides the option to NOT redirect any Tags (all or none)
+*   Provides the option to NOT redirect search results
+*   Replaced Mobile_Detect.php with current stable version (2.8.15)
 
 = 1.1 =
 04-Dec-2014
 
-*   Fixes meta box nounce
+*   Fixed meta box nounce
 
 = 1.0 =
 16-Oct-2014
 
 *   Adds shortcode [mobilesite]. Produces the exact same results as [mobilesitebutton]
 *   Change CSS class of widget output to "mobile-site-opt" instead of "mobile-site-link" (to avoid confusion between the widget and the shortcode when styling)
-*   Prepared for release as AddFunc Mobile Detect 1.1
+*   Prepared for release as AddFunc Mobile Detect 1.0
 
 27-Aug-2014
 
