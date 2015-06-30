@@ -13,6 +13,7 @@
     |_ Add|  _/| |_| | | | | (__
       |_| |_|   \__,_|_| |_|\___\
 */
+$aFMD_Version = '2';
 
 
 
@@ -391,4 +392,31 @@ function aFmobdtct_save( $post_id )
   if( !current_user_can( 'edit_post' ) ) return;
   if( isset( $_POST['aFmobdtct_equiv']))
     update_post_meta($post_id, 'aFmobdtct_equiv', $_POST['aFmobdtct_equiv']);
+}
+
+
+
+/*
+    F U N C T I O N S
+    =================
+*/
+
+function aFMDUpgradeNag() {
+  if ( !current_user_can('install_plugins') ) return;
+  $aFMD_v = 'version';
+  if(get_bloginfo('version') >= "4.0"){
+    $aFFavs = network_admin_url('plugin-install.php?tab=favorites&user=addfunc');
+    $aFFavsTarg = '';
+  }
+  else {
+    $aFFavs = 'http://profiles.wordpress.org/addfunc';
+    $aFFavsTarg = ' target="_blank"';
+  }
+  if ( get_site_option( $aFMD_v ) == $aFMD_Version ) return;
+    $msg = sprintf(__('Thank you for updating AddFunc Mobile Detect! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and trying out <a href="%s"'.$aFFavsTarg.'>our other plugins</a>!'),'http://wordpress.org/support/view/plugin-reviews/addfunc-mobile-detect',$aFFavs);
+  echo "<div class='update-nag'>$msg</div>";
+  update_site_option( $aFMD_v, $aFMD_Version );
+}
+if (is_admin()){
+  add_action('admin_notices', 'aFMDUpgradeNag');
 }
