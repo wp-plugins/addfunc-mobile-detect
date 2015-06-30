@@ -34,7 +34,7 @@
         </li>
         <li>
           <input class="aFswitch aFpre" type="checkbox" name="aFmobdtct_page" id="aFmobdtct_page" value="false" <?php checked( 'false', get_option('aFmobdtct_page')); ?> />
-          <label class="aFswitch aFpre" for="aFmobdtct_page" ><span><b style="display:none;">DO</b><b>DON'T</b></span> <strong><span class="aFup">r</span>edirect the Pages</strong> (excludes Front page)</label>
+          <label class="aFswitch aFpre" for="aFmobdtct_page" ><span><b style="display:none;">DO</b><b>DON'T</b></span> <strong><span class="aFup">r</span>edirect Pages</strong> (excludes Front page)</label>
         </li>
         <li>
           <input class="aFswitch aFpre" type="checkbox" name="aFmobdtct_home" id="aFmobdtct_home" value="false" <?php checked( 'false', get_option('aFmobdtct_home')); ?> />
