@@ -175,6 +175,7 @@ define('aFmobdtct_NICK', 'Mobile Detect');
       register_setting(aFmobdtct_ID.'_options', 'aFmobdtct_search');
       register_setting(aFmobdtct_ID.'_options', 'the_mobile_site_uri','aFxmobdefault');
       register_setting(aFmobdtct_ID.'_options', 'non_mobile_site_uri');
+      register_setting(aFmobdtct_ID.'_options', 'aFmobdtct_version');
     }
     public static function menu()
     {
@@ -403,7 +404,7 @@ function aFmobdtct_save( $post_id )
 
 function aFMDUpgradeNag() {
   if ( !current_user_can('install_plugins') ) return;
-  $aFMD_v = 'version';
+  $aFmobdtct_version = 'version';
   if(get_bloginfo('version') >= "4.0"){
     $aFFavs = network_admin_url('plugin-install.php?tab=favorites&user=addfunc');
     $aFFavsTarg = '';
@@ -412,10 +413,10 @@ function aFMDUpgradeNag() {
     $aFFavs = 'http://profiles.wordpress.org/addfunc';
     $aFFavsTarg = ' target="_blank"';
   }
-  if ( get_site_option( $aFMD_v ) == $aFMD_Version ) return;
+  if ( get_site_option( $aFmobdtct_version ) == $aFMD_Version ) return;
     $msg = sprintf(__('Thank you for updating AddFunc Mobile Detect! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and trying out <a href="%s"'.$aFFavsTarg.'>our other plugins</a>!'),'http://wordpress.org/support/view/plugin-reviews/addfunc-mobile-detect',$aFFavs);
   echo "<div class='update-nag'>$msg</div>";
-  update_site_option( $aFMD_v, $aFMD_Version );
+  update_site_option( $aFmobdtct_version, $aFMD_Version );
 }
 if (is_admin()){
   add_action('admin_notices', 'aFMDUpgradeNag');
