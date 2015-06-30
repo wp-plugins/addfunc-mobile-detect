@@ -400,7 +400,6 @@ function aFmobdtct_save( $post_id )
 /*
     F U N C T I O N S
     =================
-*/
 
 function aFMDUpgradeNag() {
   global $aFMDVersion;
@@ -422,3 +421,5 @@ function aFMDUpgradeNag() {
 if (is_admin()){
   add_action('admin_notices', 'aFMDUpgradeNag');
 }
+
+*/
