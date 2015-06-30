@@ -403,6 +403,7 @@ function aFmobdtct_save( $post_id )
 */
 
 function aFMDUpgradeNag() {
+  global $aFMD_Version;
   if ( !current_user_can('install_plugins') ) return;
   $aFmobdtct_version = 'version';
   if(get_bloginfo('version') >= "4.0"){
