@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: mobile, mobile detect, mobile detection, mobile redirect, page-by-page mobile redirect, page-by-page, individual page basis, per-page mobile redirect, per page mobile site redirect, mobile site redirect, mobile website redirect, mobile redirection, mobile site redirection, mobile website redirection, 301 redirect to mobile site, 301 redirect to mobile website, mobile device, mobile site, mobile website, mobile version, mobile site link, mobile website link, redirect mobile device, desktop site to mobile site redirect
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 2
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,11 @@ When a coconut falls on the beach and no one is around to hear it, does it make 
 3. Pages and post (and custom post types) are equipped with a meta box for overriding its own mobile redirect location (e.g. if the page on your desktop site is `yourdesktopsite.com/sales`, but on your mobile site it isn't `yourmobilesite.com/sales`, but `yourmobilesite.com/mobilespecials` instead, you can override the redirect with `/mobilespecials` in this field.
 
 == Changelog ==
+
+= 2.1 =
+22-Jul-2015
+
+*   Code efficiency improvements, thanks to [mangstadt83's support topic](https://wordpress.org/support/topic/code-patch?replies=4#post-7161987)
 
 = 2 =
 29-Jun-2015
